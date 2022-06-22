@@ -1,0 +1,99 @@
+@font-face {
+    font-family: IRANMarker;
+    src: url(IRANMarker.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IRANMarker;
+    text-decoration: none;
+    font-weight: 600;
+}
+body {
+    background-color: #000C66;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #050A30;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .navbar ul {
+    list-style: none;
+}
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+header .navbar ul li a {
+    font-size: 1rem;
+    padding: 20px;
+    display: block;
+    color: #4ac4f0;
+}
+header .navbar ul li a:hover {
+    color: #0E86D4;
+}
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #04213d;
+    border-radius: 10px;
+    display: none;
+}
+header .navbar ul li ul li {
+    width: 100%;
+    text-align: center;
+}
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+#menu-bar {
+    display: none;
+}
+header label {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+}
+@media (max-width: 1070px) {
+    header {
+        padding: 20px;
+    }
+    header label {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #050A30;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: none;
+        flex-direction: row-reverse;
+    }
+    header .navbar ul li {
+        width: 100%;
+    }
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+        background-color: #000;
+        border-top: 1px solid #fff;
+    }
+    #menu-bar:checked ~ .navbar {
+        display: initial;
+    }
+}
