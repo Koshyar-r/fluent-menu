@@ -20,7 +20,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    background-color: rgb(3, 9, 65);
+    background-color: rgb(3, 9, 63);
     width: 100%;
     z-index: 1000;
 }
